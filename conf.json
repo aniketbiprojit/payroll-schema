@@ -1,5 +1,9 @@
 {
 	"source": {
-		"includePattern": "\\.(jsx|js|ts|tsx)$"
-    }
+		"include": ["src"]
+	},
+	"opts": {
+		"destination": "./docs/"
+  },
+  "plugins": ["node_modules/jsdoc/plugins/markdown"]
 }
