@@ -15,5 +15,8 @@
     "dotenv": "^8.2.0",
     "mysql": "^2.18.1",
     "typeorm": "^0.2.25"
+  },
+  "devDependencies": {
+    "jsdoc": "^3.6.5"
   }
 }
