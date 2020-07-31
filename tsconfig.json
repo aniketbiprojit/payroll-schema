@@ -1,0 +1,13 @@
+{
+	"compilerOptions": {
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
+		"outDir": "build",
+		"sourceMap": true,
+		"target": "es5",
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true
+	},
+	"include": ["src/**/*", "src/entities/user.entity.ts"],
+	"exclude": ["node_modules"]
+}
