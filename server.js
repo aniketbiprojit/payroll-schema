@@ -1,6 +1,6 @@
 const { getConnectionOptions, createConnection } = require('typeorm')
 
-module.exports = async () => {
+let connect = async () => {
 	try {
 		const connectionOptions = await getConnectionOptions()
 		try {
@@ -25,4 +25,10 @@ module.exports = async () => {
 		console.error('Most likely your connection options are missing or mysql is not installed.')
 		console.error(err)
 	}
+}
+
+module.exports = async () => {
+	let connection = await connect()
+
+	console.log('Connection OK => ', connection.driver.database)
 }
