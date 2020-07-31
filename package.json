@@ -17,6 +17,7 @@
     "typeorm": "^0.2.25"
   },
   "devDependencies": {
+    "better-docs": "^2.3.0",
     "jsdoc": "^3.6.5"
   }
 }
