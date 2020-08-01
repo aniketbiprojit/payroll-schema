@@ -1,4 +1,6 @@
-import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm'
+import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from 'typeorm'
+
+import { Company } from './company.entity'
 
 @Entity()
 export class User {
@@ -13,4 +15,7 @@ export class User {
 
 	@Column()
 	isActive: boolean
+
+	@OneToMany((type) => Company, (company) => company.user, { eager: true })
+	companies: Company[]
 }
