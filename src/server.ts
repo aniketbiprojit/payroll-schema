@@ -3,7 +3,9 @@
  * @module server
  */
 
-const { getConnectionOptions, createConnection, Connection } = require('typeorm')
+import { Connection } from 'typeorm'
+
+const { getConnectionOptions, createConnection } = require('typeorm')
 
 /**
  * Create a connection for the server to use.
@@ -12,7 +14,7 @@ const { getConnectionOptions, createConnection, Connection } = require('typeorm'
  * data declared.
  * @returns {Connection} connection
  */
-let connect = async () => {
+let connect = async ():Promise<Connection> => {
 	try {
 		const connectionOptions = await getConnectionOptions()
 		try {
@@ -39,12 +41,12 @@ let connect = async () => {
 	}
 }
 
-/** Return a function which returns the connection object. 
+/** Return a function which returns the connection object.
  * Calls the connect function which is not exported.
  * Increases readability. */
 module.exports =
 	/** @returns {Connection} connection. */
-	async () => {
+	async (): Promise<Connection> => {
 		let connection = await connect()
 		console.log('Connection OK => ', connection.driver.database)
 		return connection

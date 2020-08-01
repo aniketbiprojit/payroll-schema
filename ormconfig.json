@@ -6,8 +6,16 @@
 	"password": "password",
 	"database": "typeorm",
 	"logging": true,
-    "logger": "file",
-    "extra":{
-        "timezone":"local"
-    }
+	"logger": "file",
+	"extra": {
+		"timezone": "local"
+	},
+	"entities": ["src/entity/**/*.ts"],
+	"migrations": ["src/migration/**/*.ts"],
+	"subscribers": ["src/subscriber/**/*.ts"],
+	"cli": {
+		"entitiesDir": "src/entity",
+		"migrationsDir": "src/migration",
+		"subscribersDir": "src/subscriber"
+	}
 }
