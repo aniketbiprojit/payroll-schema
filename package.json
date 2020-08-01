@@ -4,7 +4,8 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "start": "nodemon --exec ts-node ./src/index.ts"
+    "start": "nodemon --exec ts-node ./src/index.ts",
+    "typeorm": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js"
   },
   "keywords": [],
   "author": "",
@@ -27,6 +28,7 @@
     "jsdoc": "^3.6.5",
     "ts-jest": "^26.1.4",
     "ts-node": "^8.10.2",
+    "tsconfig-paths": "^3.9.0",
     "typescript": "^3.9.7"
   }
 }
