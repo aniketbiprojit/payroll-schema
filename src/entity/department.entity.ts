@@ -2,12 +2,10 @@ import { Entity, PrimaryGeneratedColumn, Column, OneToMany, ManyToOne, OneToOne 
 
 import { Company } from './company.entity'
 import { Designation } from './designation.entity'
+import Template from './template.entity'
 
 @Entity()
-export class Department {
-	@PrimaryGeneratedColumn('uuid')
-	id: string
-
+export class Department extends Template{
 	@Column()
 	departmentName: string
 

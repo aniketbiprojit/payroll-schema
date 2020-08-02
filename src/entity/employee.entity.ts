@@ -1,12 +1,10 @@
 import { Entity, PrimaryGeneratedColumn, Column, OneToMany, ManyToOne, OneToOne } from 'typeorm'
 import { Designation } from './designation.entity'
 import { Category } from './category.entity'
+import Template from './template.entity'
 
 @Entity()
-export class Employee {
-	@PrimaryGeneratedColumn('uuid')
-	id: string
-
+export class Employee extends Template{
 	@Column()
     firstName: string
     

@@ -2,12 +2,10 @@ import { Entity, PrimaryGeneratedColumn, Column, OneToMany, ManyToOne } from 'ty
 
 import { Department } from './department.entity'
 import { Employee } from './employee.entity'
+import Template from './template.entity'
 
 @Entity()
-export class Designation {
-	@PrimaryGeneratedColumn('uuid')
-	id: string
-
+export class Designation extends Template {
 	@Column()
 	designationName: string
 
@@ -18,8 +16,8 @@ export class Designation {
 	upper: Designation
 
 	@OneToMany((type) => Designation, (designation) => designation.upper)
-    lower: Designation[]
-    
-    @OneToMany((type)=> Employee, (employee)=>employee.designation)
-    employees:Employee[]
+	lower: Designation[]
+
+	@OneToMany((type) => Employee, (employee) => employee.designation)
+	employees: Employee[]
 }
