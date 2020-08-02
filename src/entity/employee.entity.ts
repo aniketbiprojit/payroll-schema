@@ -76,28 +76,28 @@ export class Employee extends Template {
 	@OneToMany((type) => OverTime, (overtime) => overtime.employee)
 	overtimes: OverTime[]
 
-    /**
+	/**
 	 * @decorator
 	 * @name OneToMany
 	 */
 	@OneToMany((type) => Expense, (expense) => expense.approver)
-    approved_expenses: Expense[]
-    
-    	/**
+	approved_expenses: Expense[]
+
+	/**
 	 * @decorator
 	 * @name OneToMany
 	 */
 	@OneToMany((type) => Expense, (expenses) => expenses.employee)
 	expenses: Expense[]
 
-    /**
+	/**
 	 * @decorator
 	 * @name OneToMany
 	 */
 	@OneToMany((type) => OverTime, (overtime) => overtime.approver)
 	approved_overtimes: OverTime[]
 
-    /**
+	/**
 	 * @decorator
 	 * @name OneToMany
 	 */

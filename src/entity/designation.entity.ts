@@ -26,11 +26,11 @@ export class Designation extends Template {
 	workingDays: string[]
 
 	@Column()
-	inTime:string
+	inTime: string
 
 	@Column({ type: 'timestamp' })
 	defaultCheckIn: Date
 
 	@Column({ type: 'timestamp' })
-    defaultCheckOut: Date
+	defaultCheckOut: Date
 }
