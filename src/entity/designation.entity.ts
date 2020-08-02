@@ -20,4 +20,11 @@ export class Designation extends Template {
 
 	@OneToMany((type) => Employee, (employee) => employee.designation)
 	employees: Employee[]
+
+	/** This will be array of MON,TUE,WED,etc. */
+	@Column('simple-array')
+	workingDays: string[]
+
+	@Column()
+	inTime:string
 }

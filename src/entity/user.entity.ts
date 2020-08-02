@@ -1,6 +1,7 @@
 import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from 'typeorm'
 
 import { Company } from './company.entity'
+import { Attendance } from './attendance/attendance.entity'
 
 @Entity()
 export class User {
@@ -18,4 +19,7 @@ export class User {
 
 	@OneToMany((type) => Company, (company) => company.user, { eager: true })
 	companies: Company[]
+
+	@OneToMany(type=>Attendance,attendance=>attendance.user)
+	attendances:Attendance[]
 }
