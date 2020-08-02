@@ -1,4 +1,4 @@
-import { Entity, Column, ManyToOne, ManyToMany } from 'typeorm'
+import { Entity, Column, ManyToOne, ManyToMany, JoinTable } from 'typeorm'
 import Template from '../template.entity'
 import { User } from '../user.entity'
 import { Calendar } from './calendar.entity'
@@ -21,5 +21,6 @@ export class Attendance extends Template {
     user:User
 
     @ManyToMany(type=>Calendar,calendar=>calendar.attendances)
+    @JoinTable()
     dates:Calendar[]
 }
