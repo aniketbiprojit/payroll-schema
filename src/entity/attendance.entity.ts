@@ -1,6 +1,6 @@
 import { Entity, Column, ManyToOne, ManyToMany, JoinTable } from 'typeorm'
-import Template from '../template.entity'
-import { User } from '../user.entity'
+import Template from './template.entity'
+import { User } from './user.entity'
 import { Calendar } from './calendar.entity'
 
 @Entity()

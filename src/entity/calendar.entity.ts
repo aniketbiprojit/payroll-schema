@@ -1,4 +1,4 @@
-import Template from '../template.entity'
+import Template from './template.entity'
 import { Column, Entity, ManyToMany } from 'typeorm'
 import { Attendance } from './attendance.entity'
 
