@@ -1,1 +1,25 @@
-[2020-07-31T12:15:17.250Z][QUERY]: CREATE DATABASE typeorm
+[2020-08-02T01:13:49.433Z][QUERY]: SELECT * FROM `INFORMATION_SCHEMA`.`COLUMNS` WHERE `TABLE_SCHEMA` = 'typeorm' AND `TABLE_NAME` = 'migrations'
+[2020-08-02T01:13:49.439Z][QUERY]: SELECT * FROM `typeorm`.`migrations` `migrations` ORDER BY `id` DESC
+[2020-08-02T01:13:49.440Z]No migrations was found in the database. Nothing to revert!
+[2020-08-02T01:14:43.401Z][QUERY]: SELECT * FROM `INFORMATION_SCHEMA`.`COLUMNS` WHERE `TABLE_SCHEMA` = 'typeorm' AND `TABLE_NAME` = 'migrations'
+[2020-08-02T01:14:43.406Z][QUERY]: CREATE TABLE `typeorm`.`migrations` (`id` int NOT NULL AUTO_INCREMENT, `timestamp` bigint NOT NULL, `name` varchar(255) NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB
+[2020-08-02T01:14:43.879Z][QUERY]: SELECT * FROM `typeorm`.`migrations` `migrations` ORDER BY `id` DESC
+[2020-08-02T01:14:43.885Z]0 migrations are already loaded in the database.
+[2020-08-02T01:14:43.885Z]1 migrations were found in the source code.
+[2020-08-02T01:14:43.885Z]1 migrations are new migrations that needs to be executed.
+[2020-08-02T01:14:43.886Z][QUERY]: START TRANSACTION
+[2020-08-02T01:14:43.888Z][QUERY]: CREATE TABLE `user` (`id` varchar(36) NOT NULL, `firstName` varchar(255) NOT NULL, `lastName` varchar(255) NOT NULL, `isActive` tinyint NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB
+[2020-08-02T01:14:44.518Z][QUERY]: CREATE TABLE `company` (`id` varchar(36) NOT NULL, `createdAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP, `updatedAt` timestamp NULL ON UPDATE CURRENT_TIMESTAMP, `companyName` varchar(255) NOT NULL, `isActive` tinyint NOT NULL, `userId` varchar(36) NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB
+[2020-08-02T01:14:45.421Z][QUERY]: CREATE TABLE `department` (`id` varchar(36) NOT NULL, `createdAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP, `updatedAt` timestamp NULL ON UPDATE CURRENT_TIMESTAMP, `departmentName` varchar(255) NOT NULL, `companyId` varchar(36) NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB
+[2020-08-02T01:14:46.304Z][QUERY]: CREATE TABLE `designation` (`id` varchar(36) NOT NULL, `createdAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP, `updatedAt` timestamp NULL ON UPDATE CURRENT_TIMESTAMP, `designationName` varchar(255) NOT NULL, `departmentId` varchar(36) NULL, `upperId` varchar(36) NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB
+[2020-08-02T01:14:47.057Z][QUERY]: CREATE TABLE `employee` (`id` varchar(36) NOT NULL, `createdAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP, `updatedAt` timestamp NULL ON UPDATE CURRENT_TIMESTAMP, `firstName` varchar(255) NOT NULL, `lastName` varchar(255) NOT NULL, `email` varchar(255) NOT NULL, `password` varchar(255) NOT NULL, `designationId` varchar(36) NULL, `categoryId` varchar(36) NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB
+[2020-08-02T01:14:48.220Z][QUERY]: CREATE TABLE `category` (`id` varchar(36) NOT NULL, `createdAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP, `updatedAt` timestamp NULL ON UPDATE CURRENT_TIMESTAMP, `job_type` enum ('freelancer', 'part-time', 'full-time', 'intern') NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB
+[2020-08-02T01:14:48.982Z][QUERY]: ALTER TABLE `company` ADD CONSTRAINT `FK_c41a1d36702f2cd0403ce58d33a` FOREIGN KEY (`userId`) REFERENCES `user`(`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+[2020-08-02T01:14:51.666Z][QUERY]: ALTER TABLE `department` ADD CONSTRAINT `FK_1c9f0159b4ae69008bd356bb1ce` FOREIGN KEY (`companyId`) REFERENCES `company`(`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+[2020-08-02T01:14:55.237Z][QUERY]: ALTER TABLE `designation` ADD CONSTRAINT `FK_db94a67866860fc6d2e4a60388d` FOREIGN KEY (`departmentId`) REFERENCES `department`(`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+[2020-08-02T01:14:59.182Z][QUERY]: ALTER TABLE `designation` ADD CONSTRAINT `FK_e45d420418f1eae055e8864fc20` FOREIGN KEY (`upperId`) REFERENCES `designation`(`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+[2020-08-02T01:15:01.802Z][QUERY]: ALTER TABLE `employee` ADD CONSTRAINT `FK_e41e10c17872cdf2f511e5d0097` FOREIGN KEY (`designationId`) REFERENCES `designation`(`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+[2020-08-02T01:15:04.619Z][QUERY]: ALTER TABLE `employee` ADD CONSTRAINT `FK_1ca0682057905f047445619b0f6` FOREIGN KEY (`categoryId`) REFERENCES `category`(`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+[2020-08-02T01:15:10.002Z][QUERY]: INSERT INTO `typeorm`.`migrations`(`timestamp`, `name`) VALUES (?, ?) -- PARAMETERS: [1596330769988,"ok1596330769988"]
+[2020-08-02T01:15:10.322Z]Migration ok1596330769988 has been executed successfully.
+[2020-08-02T01:15:10.323Z][QUERY]: COMMIT
