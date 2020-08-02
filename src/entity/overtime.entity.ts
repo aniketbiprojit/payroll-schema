@@ -4,7 +4,8 @@ import { Employee } from "./employee.entity";
 
 export enum OverTimeStatus{
     APPLIED='Applied for overtime',
-    APPROVE='Approved for overtime'
+    APPROVE='Approved to do overtime',
+    REJECT='Rejected from doing overtime'
 }
 
 @Entity()
