@@ -3,6 +3,12 @@ import Template from './template.entity'
 import { User } from './user.entity'
 import { Calendar } from './calendar.entity'
 
+export enum Status{
+    LEAVE='on leave',
+    ABSENT='absent',
+    PRESENT='present'
+}
+
 @Entity()
 export class Attendance extends Template {
 	@Column({ type: 'timestamp' })
@@ -11,11 +17,8 @@ export class Attendance extends Template {
 	@Column({ type: 'timestamp' })
     checkOut: Date
     
-    @Column({ type: 'timestamp' })
-	defaultCheckIn: Date
-
-	@Column({ type: 'timestamp' })
-    defaultCheckOut: Date
+    @Column({type:"enum",enum:Status})
+    status:Status
 
     @ManyToOne(type=>User,user=>user.attendances)
     user:User

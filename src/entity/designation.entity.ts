@@ -27,4 +27,10 @@ export class Designation extends Template {
 
 	@Column()
 	inTime:string
+
+	@Column({ type: 'timestamp' })
+	defaultCheckIn: Date
+
+	@Column({ type: 'timestamp' })
+    defaultCheckOut: Date
 }
