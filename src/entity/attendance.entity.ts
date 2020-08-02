@@ -23,7 +23,6 @@ export class Attendance extends Template {
     @ManyToOne(type=>User,user=>user.attendances)
     user:User
 
-    @ManyToMany(type=>Calendar,calendar=>calendar.attendances)
-    @JoinTable()
-    dates:Calendar[]
+    @ManyToOne(type=>Calendar,calendar=>calendar.attendances)
+    dates:Calendar
 }

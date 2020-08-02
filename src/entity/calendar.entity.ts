@@ -1,5 +1,5 @@
 import Template from './template.entity'
-import { Column, Entity, ManyToMany } from 'typeorm'
+import { Column, Entity, OneToMany } from 'typeorm'
 import { Attendance } from './attendance.entity'
 
 export enum days {
@@ -49,7 +49,7 @@ export abstract class CalendarBaseClass extends Template {
 
 @Entity()
 export class Calendar extends CalendarBaseClass{
-	@ManyToMany(type=>Attendance,attendance=>attendance.dates)
+	@OneToMany(type=>Attendance,attendance=>attendance.dates)
 	attendances:Attendance[]
 }
 
