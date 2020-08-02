@@ -100,6 +100,7 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_entity_employee_entity_.employee.html#approved_expenses" class="tsd-kind-icon">approved_<wbr>expenses</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_entity_employee_entity_.employee.html#approved_overtimes" class="tsd-kind-icon">approved_<wbr>overtimes</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_entity_employee_entity_.employee.html#attendances" class="tsd-kind-icon">attendances</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_entity_employee_entity_.employee.html#category" class="tsd-kind-icon">category</a></li>
@@ -108,11 +109,13 @@
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_entity_employee_entity_.employee.html#defaultcheckout" class="tsd-kind-icon">default<wbr>Check<wbr>Out</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_entity_employee_entity_.employee.html#designation" class="tsd-kind-icon">designation</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_entity_employee_entity_.employee.html#email" class="tsd-kind-icon">email</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_entity_employee_entity_.employee.html#expenses" class="tsd-kind-icon">expenses</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_entity_employee_entity_.employee.html#firstname" class="tsd-kind-icon">first<wbr>Name</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_entity_employee_entity_.employee.html#id" class="tsd-kind-icon">id</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_entity_employee_entity_.employee.html#lastname" class="tsd-kind-icon">last<wbr>Name</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_entity_employee_entity_.employee.html#overtimes" class="tsd-kind-icon">overtimes</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_entity_employee_entity_.employee.html#password" class="tsd-kind-icon">password</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_entity_employee_entity_.employee.html#payroll" class="tsd-kind-icon">payroll</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_entity_employee_entity_.employee.html#updatedat" class="tsd-kind-icon">updated<wbr>At</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_entity_employee_entity_.employee.html#workingdays" class="tsd-kind-icon">working<wbr>Days</a></li>
 							</ul>
@@ -123,12 +126,31 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="approved_expenses" class="tsd-anchor"></a>
+					<h3>approved_<wbr>expenses</h3>
+					<div class="tsd-signature tsd-kind-icon">approved_<wbr>expenses<span class="tsd-signature-symbol">:</span> <a href="_entity_expenses_entity_.expense.html" class="tsd-signature-type">Expense</a><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/aniketbiprojit/typeorm-node/blob/b89e14b/src/entity/employee.entity.ts#L91">entity/employee.entity.ts:91</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<dl class="tsd-comment-tags">
+							<dt>decorator</dt>
+							<dd></dd>
+							<dt>name</dt>
+							<dd><p>OneToMany</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="approved_overtimes" class="tsd-anchor"></a>
 					<h3>approved_<wbr>overtimes</h3>
 					<div class="tsd-signature tsd-kind-icon">approved_<wbr>overtimes<span class="tsd-signature-symbol">:</span> <a href="_entity_overtime_entity_.overtime.html" class="tsd-signature-type">OverTime</a><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/aniketbiprojit/typeorm-node/blob/c4af4fd/src/entity/employee.entity.ts#L83">entity/employee.entity.ts:83</a></li>
+							<li>Defined in <a href="https://github.com/aniketbiprojit/typeorm-node/blob/b89e14b/src/entity/employee.entity.ts#L105">entity/employee.entity.ts:105</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -147,7 +169,7 @@
 					<div class="tsd-signature tsd-kind-icon">attendances<span class="tsd-signature-symbol">:</span> <a href="_entity_attendance_entity_.attendance.html" class="tsd-signature-type">Attendance</a><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/aniketbiprojit/typeorm-node/blob/c4af4fd/src/entity/employee.entity.ts#L90">entity/employee.entity.ts:90</a></li>
+							<li>Defined in <a href="https://github.com/aniketbiprojit/typeorm-node/blob/b89e14b/src/entity/employee.entity.ts#L112">entity/employee.entity.ts:112</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -166,7 +188,7 @@
 					<div class="tsd-signature tsd-kind-icon">category<span class="tsd-signature-symbol">:</span> <a href="_entity_category_entity_.category.html" class="tsd-signature-type">Category</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/aniketbiprojit/typeorm-node/blob/c4af4fd/src/entity/employee.entity.ts#L69">entity/employee.entity.ts:69</a></li>
+							<li>Defined in <a href="https://github.com/aniketbiprojit/typeorm-node/blob/b89e14b/src/entity/employee.entity.ts#L77">entity/employee.entity.ts:77</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -186,7 +208,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_entity_template_entity_.template.html">Template</a>.<a href="_entity_template_entity_.template.html#createdat">createdAt</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/aniketbiprojit/typeorm-node/blob/c4af4fd/src/entity/template.entity.ts#L8">entity/template.entity.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/aniketbiprojit/typeorm-node/blob/b89e14b/src/entity/template.entity.ts#L8">entity/template.entity.ts:8</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -196,7 +218,7 @@
 					<div class="tsd-signature tsd-kind-icon">default<wbr>Check<wbr>In<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Date</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/aniketbiprojit/typeorm-node/blob/c4af4fd/src/entity/employee.entity.ts#L22">entity/employee.entity.ts:22</a></li>
+							<li>Defined in <a href="https://github.com/aniketbiprojit/typeorm-node/blob/b89e14b/src/entity/employee.entity.ts#L24">entity/employee.entity.ts:24</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -221,7 +243,7 @@
 					<div class="tsd-signature tsd-kind-icon">default<wbr>Check<wbr>Out<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Date</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/aniketbiprojit/typeorm-node/blob/c4af4fd/src/entity/employee.entity.ts#L32">entity/employee.entity.ts:32</a></li>
+							<li>Defined in <a href="https://github.com/aniketbiprojit/typeorm-node/blob/b89e14b/src/entity/employee.entity.ts#L34">entity/employee.entity.ts:34</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -246,7 +268,7 @@
 					<div class="tsd-signature tsd-kind-icon">designation<span class="tsd-signature-symbol">:</span> <a href="_entity_designation_entity_.designation.html" class="tsd-signature-type">Designation</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/aniketbiprojit/typeorm-node/blob/c4af4fd/src/entity/employee.entity.ts#L62">entity/employee.entity.ts:62</a></li>
+							<li>Defined in <a href="https://github.com/aniketbiprojit/typeorm-node/blob/b89e14b/src/entity/employee.entity.ts#L70">entity/employee.entity.ts:70</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -265,9 +287,28 @@
 					<div class="tsd-signature tsd-kind-icon">email<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/aniketbiprojit/typeorm-node/blob/c4af4fd/src/entity/employee.entity.ts#L52">entity/employee.entity.ts:52</a></li>
+							<li>Defined in <a href="https://github.com/aniketbiprojit/typeorm-node/blob/b89e14b/src/entity/employee.entity.ts#L54">entity/employee.entity.ts:54</a></li>
 						</ul>
 					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="expenses" class="tsd-anchor"></a>
+					<h3>expenses</h3>
+					<div class="tsd-signature tsd-kind-icon">expenses<span class="tsd-signature-symbol">:</span> <a href="_entity_expenses_entity_.expense.html" class="tsd-signature-type">Expense</a><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/aniketbiprojit/typeorm-node/blob/b89e14b/src/entity/employee.entity.ts#L98">entity/employee.entity.ts:98</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<dl class="tsd-comment-tags">
+							<dt>decorator</dt>
+							<dd></dd>
+							<dt>name</dt>
+							<dd><p>OneToMany</p>
+							</dd>
+						</dl>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="firstname" class="tsd-anchor"></a>
@@ -275,7 +316,7 @@
 					<div class="tsd-signature tsd-kind-icon">first<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/aniketbiprojit/typeorm-node/blob/c4af4fd/src/entity/employee.entity.ts#L46">entity/employee.entity.ts:46</a></li>
+							<li>Defined in <a href="https://github.com/aniketbiprojit/typeorm-node/blob/b89e14b/src/entity/employee.entity.ts#L48">entity/employee.entity.ts:48</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -286,7 +327,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_entity_template_entity_.template.html">Template</a>.<a href="_entity_template_entity_.template.html#id">id</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/aniketbiprojit/typeorm-node/blob/c4af4fd/src/entity/template.entity.ts#L5">entity/template.entity.ts:5</a></li>
+							<li>Defined in <a href="https://github.com/aniketbiprojit/typeorm-node/blob/b89e14b/src/entity/template.entity.ts#L5">entity/template.entity.ts:5</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -296,7 +337,7 @@
 					<div class="tsd-signature tsd-kind-icon">last<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/aniketbiprojit/typeorm-node/blob/c4af4fd/src/entity/employee.entity.ts#L49">entity/employee.entity.ts:49</a></li>
+							<li>Defined in <a href="https://github.com/aniketbiprojit/typeorm-node/blob/b89e14b/src/entity/employee.entity.ts#L51">entity/employee.entity.ts:51</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -306,7 +347,7 @@
 					<div class="tsd-signature tsd-kind-icon">overtimes<span class="tsd-signature-symbol">:</span> <a href="_entity_overtime_entity_.overtime.html" class="tsd-signature-type">OverTime</a><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/aniketbiprojit/typeorm-node/blob/c4af4fd/src/entity/employee.entity.ts#L76">entity/employee.entity.ts:76</a></li>
+							<li>Defined in <a href="https://github.com/aniketbiprojit/typeorm-node/blob/b89e14b/src/entity/employee.entity.ts#L84">entity/employee.entity.ts:84</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -325,9 +366,26 @@
 					<div class="tsd-signature tsd-kind-icon">password<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/aniketbiprojit/typeorm-node/blob/c4af4fd/src/entity/employee.entity.ts#L55">entity/employee.entity.ts:55</a></li>
+							<li>Defined in <a href="https://github.com/aniketbiprojit/typeorm-node/blob/b89e14b/src/entity/employee.entity.ts#L57">entity/employee.entity.ts:57</a></li>
 						</ul>
 					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="payroll" class="tsd-anchor"></a>
+					<h3>payroll</h3>
+					<div class="tsd-signature tsd-kind-icon">payroll<span class="tsd-signature-symbol">:</span> <a href="_entity_payroll_payroll_entity_.payroll.html" class="tsd-signature-type">PayRoll</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/aniketbiprojit/typeorm-node/blob/b89e14b/src/entity/employee.entity.ts#L63">entity/employee.entity.ts:63</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>inherits</p>
+							</dd>
+						</dl>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="updatedat" class="tsd-anchor"></a>
@@ -336,7 +394,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_entity_template_entity_.template.html">Template</a>.<a href="_entity_template_entity_.template.html#updatedat">updatedAt</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/aniketbiprojit/typeorm-node/blob/c4af4fd/src/entity/template.entity.ts#L11">entity/template.entity.ts:11</a></li>
+							<li>Defined in <a href="https://github.com/aniketbiprojit/typeorm-node/blob/b89e14b/src/entity/template.entity.ts#L11">entity/template.entity.ts:11</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -346,7 +404,7 @@
 					<div class="tsd-signature tsd-kind-icon">working<wbr>Days<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/aniketbiprojit/typeorm-node/blob/c4af4fd/src/entity/employee.entity.ts#L43">entity/employee.entity.ts:43</a></li>
+							<li>Defined in <a href="https://github.com/aniketbiprojit/typeorm-node/blob/b89e14b/src/entity/employee.entity.ts#L45">entity/employee.entity.ts:45</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -396,7 +454,22 @@
 						<a href="../modules/_entity_employee_entity_.html">&quot;entity/employee.entity&quot;</a>
 					</li>
 					<li class=" tsd-kind-module">
+						<a href="../modules/_entity_expenses_entity_.html">&quot;entity/expenses.entity&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
 						<a href="../modules/_entity_overtime_entity_.html">&quot;entity/overtime.entity&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_entity_payroll_payroll_entity_.html">&quot;entity/payroll/payroll.entity&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_entity_payroll_payroll_architecture_entity_.html">&quot;entity/payroll/payroll_<wbr>architecture.entity&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_entity_payroll_payroll_component_entity_.html">&quot;entity/payroll/payroll_<wbr>component.entity&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_entity_payroll_payroll_release_entity_.html">&quot;entity/payroll/payroll_<wbr>release.entity&quot;</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="../modules/_entity_template_entity_.html">&quot;entity/template.entity&quot;</a>
@@ -406,9 +479,6 @@
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="../modules/_index_.html">&quot;index&quot;</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/_migration_1596336313899_ok_.html">&quot;migration/1596336313899-<wbr>ok&quot;</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="../modules/_server_.html">&quot;server&quot;</a>
@@ -425,6 +495,9 @@
 					<li class="current tsd-kind-class tsd-parent-kind-module">
 						<a href="_entity_employee_entity_.employee.html" class="tsd-kind-icon">Employee</a>
 						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_entity_employee_entity_.employee.html#approved_expenses" class="tsd-kind-icon">approved_<wbr>expenses</a>
+							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_entity_employee_entity_.employee.html#approved_overtimes" class="tsd-kind-icon">approved_<wbr>overtimes</a>
 							</li>
@@ -450,6 +523,9 @@
 								<a href="_entity_employee_entity_.employee.html#email" class="tsd-kind-icon">email</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_entity_employee_entity_.employee.html#expenses" class="tsd-kind-icon">expenses</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_entity_employee_entity_.employee.html#firstname" class="tsd-kind-icon">first<wbr>Name</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -463,6 +539,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_entity_employee_entity_.employee.html#password" class="tsd-kind-icon">password</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_entity_employee_entity_.employee.html#payroll" class="tsd-kind-icon">payroll</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 								<a href="_entity_employee_entity_.employee.html#updatedat" class="tsd-kind-icon">updated<wbr>At</a>

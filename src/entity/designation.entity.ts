@@ -3,6 +3,7 @@ import { Entity, PrimaryGeneratedColumn, Column, OneToMany, ManyToOne } from 'ty
 import { Department } from './department.entity'
 import { Employee } from './employee.entity'
 import Template from './template.entity'
+import { PayRoll } from './payroll/payroll.entity'
 
 @Entity()
 export class Designation extends Template {
@@ -25,12 +26,18 @@ export class Designation extends Template {
 	@Column('simple-array')
 	workingDays: string[]
 
+	/**
+	 * @default inherits
+	 */
+	@OneToMany(type=>PayRoll,(pr)=>pr.designation)
+	payroll:PayRoll
+
 	@Column()
-	inTime:string
+	inTime: string
 
 	@Column({ type: 'timestamp' })
 	defaultCheckIn: Date
 
 	@Column({ type: 'timestamp' })
-    defaultCheckOut: Date
+	defaultCheckOut: Date
 }

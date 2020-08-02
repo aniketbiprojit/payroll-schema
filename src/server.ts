@@ -19,6 +19,7 @@ let connect = async ():Promise<Connection> => {
 		const connectionOptions = await getConnectionOptions()
 		try {
 			let connection = await createConnection(connectionOptions)
+			
 			return connection
 		} catch (err) {
 			if (err.errno === 1049) {
