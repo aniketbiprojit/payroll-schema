@@ -3,59 +3,89 @@ import { Designation } from './designation.entity'
 import { Category } from './category.entity'
 import Template from './template.entity'
 import { Attendance } from './attendance.entity'
-import {  OverTime } from './overtime.entity'
+import { OverTime } from './overtime.entity'
 
-
+/**
+ * @decorator
+ * @name Entity
+ */
 @Entity()
-export class Employee extends Template{
-
-
+export class Employee extends Template {
 	/**
+	 * @decorator
+	 * @name Column
+	 * @type timestamp
 	 * @default 'inherits'
-	 * Changes if designation changes, or can be manually set up independent of designation.
+	 * @description Changes if designation changes, or can be manually set up independent of designation.
 	 * */
 	@Column({ type: 'timestamp' })
 	defaultCheckIn: Date
 
 	/**
-	 * @default 'inherits'
-	 * Changes if designation changes, or can be manually set up independent of designation.
+	 * @decorator
+	 * @name Column
+	 * @type timestamp
+	 * @default inherits
+	 * @description Changes if designation changes, or can be manually set up independent of designation.
 	 * */
 	@Column({ type: 'timestamp' })
 	defaultCheckOut: Date
 
-	/** 
+	/**
+	 * @decorator
+	 * @name Column
+	 * @type simple-array
 	 * @default 'inherits'
-	 * This will be array of MON,TUE,WED,etc.
+	 * @description This will be array of MON,TUE,WED,etc.
 	 * Changes if designation changes, or can be manually set up independent of designation.
 	 */
 	@Column('simple-array')
 	workingDays: string[]
 
 	@Column()
-    firstName: string
-    
-    @Column()
+	firstName: string
+
+	@Column()
 	lastName: string
 
-    @Column()
+	@Column()
 	email: string
 
-    @Column()
+	@Column()
 	password: string
 
-
+	/**
+	 * @decorator
+	 * @name ManyToOne
+	 */
 	@ManyToOne((type) => Designation, (designation) => designation.employees)
 	designation: Designation
 
-    @ManyToOne((type=>Category),(category)=>category.employees)
-    category:Category
-    
-    @OneToMany(type=>OverTime,overtime=>overtime.employee)
-    overtimes:OverTime[]
+	/**
+	 * @decorator
+	 * @name ManyToOne
+	 */
+	@ManyToOne((type) => Category, (category) => category.employees)
+	category: Category
 
+	/**
+	 * @decorator
+	 * @name OneToMany
+	 */
+	@OneToMany((type) => OverTime, (overtime) => overtime.employee)
+	overtimes: OverTime[]
 
-    @OneToMany((type) => Attendance, (attendance) => attendance.employee)
-    attendances: Attendance[]
-    
+    /**
+	 * @decorator
+	 * @name OneToMany
+	 */
+	@OneToMany((type) => OverTime, (overtime) => overtime.approver)
+	approved_overtimes: OverTime[]
+
+    /**
+	 * @decorator
+	 * @name OneToMany
+	 */
+	@OneToMany((type) => Attendance, (attendance) => attendance.employee)
+	attendances: Attendance[]
 }

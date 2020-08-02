@@ -69,6 +69,17 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<dl class="tsd-comment-tags">
+						<dt>decorator</dt>
+						<dd></dd>
+						<dt>name</dt>
+						<dd><p>Entity</p>
+						</dd>
+					</dl>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -89,6 +100,7 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_entity_employee_entity_.employee.html#approved_overtimes" class="tsd-kind-icon">approved_<wbr>overtimes</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_entity_employee_entity_.employee.html#attendances" class="tsd-kind-icon">attendances</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_entity_employee_entity_.employee.html#category" class="tsd-kind-icon">category</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_entity_employee_entity_.employee.html#createdat" class="tsd-kind-icon">created<wbr>At</a></li>
@@ -111,12 +123,22 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="approved_overtimes" class="tsd-anchor"></a>
+					<h3>approved_<wbr>overtimes</h3>
+					<div class="tsd-signature tsd-kind-icon">approved_<wbr>overtimes<span class="tsd-signature-symbol">:</span> <a href="_entity_overtime_entity_.overtime.html" class="tsd-signature-type">OverTime</a><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/aniketbiprojit/typeorm-node/blob/fbdc90b/src/entity/employee.entity.ts#L70">entity/employee.entity.ts:70</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="attendances" class="tsd-anchor"></a>
 					<h3>attendances</h3>
 					<div class="tsd-signature tsd-kind-icon">attendances<span class="tsd-signature-symbol">:</span> <a href="_entity_attendance_entity_.attendance.html" class="tsd-signature-type">Attendance</a><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/aniketbiprojit/typeorm-node/blob/a6d51d9/src/entity/employee.entity.ts#L59">entity/employee.entity.ts:59</a></li>
+							<li>Defined in <a href="https://github.com/aniketbiprojit/typeorm-node/blob/fbdc90b/src/entity/employee.entity.ts#L74">entity/employee.entity.ts:74</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -126,7 +148,7 @@
 					<div class="tsd-signature tsd-kind-icon">category<span class="tsd-signature-symbol">:</span> <a href="_entity_category_entity_.category.html" class="tsd-signature-type">Category</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/aniketbiprojit/typeorm-node/blob/a6d51d9/src/entity/employee.entity.ts#L52">entity/employee.entity.ts:52</a></li>
+							<li>Defined in <a href="https://github.com/aniketbiprojit/typeorm-node/blob/fbdc90b/src/entity/employee.entity.ts#L64">entity/employee.entity.ts:64</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -137,7 +159,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_entity_template_entity_.template.html">Template</a>.<a href="_entity_template_entity_.template.html#createdat">createdAt</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/aniketbiprojit/typeorm-node/blob/a6d51d9/src/entity/template.entity.ts#L8">entity/template.entity.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/aniketbiprojit/typeorm-node/blob/fbdc90b/src/entity/template.entity.ts#L8">entity/template.entity.ts:8</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -147,11 +169,16 @@
 					<div class="tsd-signature tsd-kind-icon">default<wbr>Check<wbr>In<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Date</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/aniketbiprojit/typeorm-node/blob/a6d51d9/src/entity/employee.entity.ts#L18">entity/employee.entity.ts:18</a></li>
+							<li>Defined in <a href="https://github.com/aniketbiprojit/typeorm-node/blob/fbdc90b/src/entity/employee.entity.ts#L24">entity/employee.entity.ts:24</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<dl class="tsd-comment-tags">
+							<dt>decorator</dt>
+							<dd></dd>
+							<dt>name</dt>
+							<dd><p>Column</p>
+							</dd>
 							<dt>default</dt>
 							<dd><p>&#39;inherits&#39;
 								Changes if designation changes, or can be manually set up independent of designation.</p>
@@ -165,14 +192,21 @@
 					<div class="tsd-signature tsd-kind-icon">default<wbr>Check<wbr>Out<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Date</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/aniketbiprojit/typeorm-node/blob/a6d51d9/src/entity/employee.entity.ts#L25">entity/employee.entity.ts:25</a></li>
+							<li>Defined in <a href="https://github.com/aniketbiprojit/typeorm-node/blob/fbdc90b/src/entity/employee.entity.ts#L34">entity/employee.entity.ts:34</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<dl class="tsd-comment-tags">
+							<dt>decorator</dt>
+							<dd></dd>
+							<dt>name</dt>
+							<dd><p>Column</p>
+							</dd>
 							<dt>default</dt>
-							<dd><p>&#39;inherits&#39;
-								Changes if designation changes, or can be manually set up independent of designation.</p>
+							<dd><p>inherits</p>
+							</dd>
+							<dt>description</dt>
+							<dd><p>Changes if designation changes, or can be manually set up independent of designation.</p>
 							</dd>
 						</dl>
 					</div>
@@ -183,7 +217,7 @@
 					<div class="tsd-signature tsd-kind-icon">designation<span class="tsd-signature-symbol">:</span> <a href="_entity_designation_entity_.designation.html" class="tsd-signature-type">Designation</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/aniketbiprojit/typeorm-node/blob/a6d51d9/src/entity/employee.entity.ts#L49">entity/employee.entity.ts:49</a></li>
+							<li>Defined in <a href="https://github.com/aniketbiprojit/typeorm-node/blob/fbdc90b/src/entity/employee.entity.ts#L61">entity/employee.entity.ts:61</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -193,7 +227,7 @@
 					<div class="tsd-signature tsd-kind-icon">email<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/aniketbiprojit/typeorm-node/blob/a6d51d9/src/entity/employee.entity.ts#L42">entity/employee.entity.ts:42</a></li>
+							<li>Defined in <a href="https://github.com/aniketbiprojit/typeorm-node/blob/fbdc90b/src/entity/employee.entity.ts#L54">entity/employee.entity.ts:54</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -203,7 +237,7 @@
 					<div class="tsd-signature tsd-kind-icon">first<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/aniketbiprojit/typeorm-node/blob/a6d51d9/src/entity/employee.entity.ts#L36">entity/employee.entity.ts:36</a></li>
+							<li>Defined in <a href="https://github.com/aniketbiprojit/typeorm-node/blob/fbdc90b/src/entity/employee.entity.ts#L48">entity/employee.entity.ts:48</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -214,7 +248,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_entity_template_entity_.template.html">Template</a>.<a href="_entity_template_entity_.template.html#id">id</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/aniketbiprojit/typeorm-node/blob/a6d51d9/src/entity/template.entity.ts#L5">entity/template.entity.ts:5</a></li>
+							<li>Defined in <a href="https://github.com/aniketbiprojit/typeorm-node/blob/fbdc90b/src/entity/template.entity.ts#L5">entity/template.entity.ts:5</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -224,7 +258,7 @@
 					<div class="tsd-signature tsd-kind-icon">last<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/aniketbiprojit/typeorm-node/blob/a6d51d9/src/entity/employee.entity.ts#L39">entity/employee.entity.ts:39</a></li>
+							<li>Defined in <a href="https://github.com/aniketbiprojit/typeorm-node/blob/fbdc90b/src/entity/employee.entity.ts#L51">entity/employee.entity.ts:51</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -234,7 +268,7 @@
 					<div class="tsd-signature tsd-kind-icon">overtimes<span class="tsd-signature-symbol">:</span> <a href="_entity_overtime_entity_.overtime.html" class="tsd-signature-type">OverTime</a><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/aniketbiprojit/typeorm-node/blob/a6d51d9/src/entity/employee.entity.ts#L55">entity/employee.entity.ts:55</a></li>
+							<li>Defined in <a href="https://github.com/aniketbiprojit/typeorm-node/blob/fbdc90b/src/entity/employee.entity.ts#L67">entity/employee.entity.ts:67</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -244,7 +278,7 @@
 					<div class="tsd-signature tsd-kind-icon">password<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/aniketbiprojit/typeorm-node/blob/a6d51d9/src/entity/employee.entity.ts#L45">entity/employee.entity.ts:45</a></li>
+							<li>Defined in <a href="https://github.com/aniketbiprojit/typeorm-node/blob/fbdc90b/src/entity/employee.entity.ts#L57">entity/employee.entity.ts:57</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -255,7 +289,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_entity_template_entity_.template.html">Template</a>.<a href="_entity_template_entity_.template.html#updatedat">updatedAt</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/aniketbiprojit/typeorm-node/blob/a6d51d9/src/entity/template.entity.ts#L11">entity/template.entity.ts:11</a></li>
+							<li>Defined in <a href="https://github.com/aniketbiprojit/typeorm-node/blob/fbdc90b/src/entity/template.entity.ts#L11">entity/template.entity.ts:11</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -265,14 +299,21 @@
 					<div class="tsd-signature tsd-kind-icon">working<wbr>Days<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/aniketbiprojit/typeorm-node/blob/a6d51d9/src/entity/employee.entity.ts#L33">entity/employee.entity.ts:33</a></li>
+							<li>Defined in <a href="https://github.com/aniketbiprojit/typeorm-node/blob/fbdc90b/src/entity/employee.entity.ts#L45">entity/employee.entity.ts:45</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<dl class="tsd-comment-tags">
+							<dt>decorator</dt>
+							<dd></dd>
+							<dt>name</dt>
+							<dd><p>Column</p>
+							</dd>
 							<dt>default</dt>
-							<dd><p>&#39;inherits&#39;
-									This will be array of MON,TUE,WED,etc.
+							<dd><p>&#39;inherits&#39;</p>
+							</dd>
+							<dt>description</dt>
+							<dd><p>This will be array of MON,TUE,WED,etc.
 								Changes if designation changes, or can be manually set up independent of designation.</p>
 							</dd>
 						</dl>
@@ -337,6 +378,9 @@
 					<li class="current tsd-kind-class tsd-parent-kind-module">
 						<a href="_entity_employee_entity_.employee.html" class="tsd-kind-icon">Employee</a>
 						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_entity_employee_entity_.employee.html#approved_overtimes" class="tsd-kind-icon">approved_<wbr>overtimes</a>
+							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_entity_employee_entity_.employee.html#attendances" class="tsd-kind-icon">attendances</a>
 							</li>
