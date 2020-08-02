@@ -1,12 +1,12 @@
-import { Entity, TableInheritance, Column, Generated, ManyToOne } from 'typeorm'
+import { Entity, TableInheritance, Column, Generated, ManyToOne, ChildEntity, OneToMany } from 'typeorm'
 import Template from '../template.entity'
 import { PayRollArchitecture } from './payroll_architecture.entity'
 import { Department } from '../department.entity'
 import { Designation } from '../designation.entity'
 import { Employee } from '../employee.entity'
+import { Releases } from './payroll_release.entity'
 
 @Entity()
-@TableInheritance({ column: { type: 'varchar', name: 'release' } })
 export class PayRoll extends Template {
 	@Column('int')
 	base_salary: number
@@ -22,8 +22,7 @@ export class PayRoll extends Template {
 
 	@ManyToOne((type) => Employee, (emp) => emp.payroll)
 	employee: Employee
+
+	@OneToMany((type) => Releases, (releases) => releases.payroll)
+	releases: Releases[]
 }
-
-export class WeeklyPayRoll extends Template {}
-
-export class MonthlyPayRoll extends Template {}
