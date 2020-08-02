@@ -1,7 +1,7 @@
 import {MigrationInterface, QueryRunner} from "typeorm";
 
-export class template1596329620162 implements MigrationInterface {
-    name = 'template1596329620162'
+export class ok1596330769988 implements MigrationInterface {
+    name = 'ok1596330769988'
 
     public async up(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.query("CREATE TABLE `user` (`id` varchar(36) NOT NULL, `firstName` varchar(255) NOT NULL, `lastName` varchar(255) NOT NULL, `isActive` tinyint NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB");
@@ -9,7 +9,7 @@ export class template1596329620162 implements MigrationInterface {
         await queryRunner.query("CREATE TABLE `department` (`id` varchar(36) NOT NULL, `createdAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP, `updatedAt` timestamp NULL ON UPDATE CURRENT_TIMESTAMP, `departmentName` varchar(255) NOT NULL, `companyId` varchar(36) NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB");
         await queryRunner.query("CREATE TABLE `designation` (`id` varchar(36) NOT NULL, `createdAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP, `updatedAt` timestamp NULL ON UPDATE CURRENT_TIMESTAMP, `designationName` varchar(255) NOT NULL, `departmentId` varchar(36) NULL, `upperId` varchar(36) NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB");
         await queryRunner.query("CREATE TABLE `employee` (`id` varchar(36) NOT NULL, `createdAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP, `updatedAt` timestamp NULL ON UPDATE CURRENT_TIMESTAMP, `firstName` varchar(255) NOT NULL, `lastName` varchar(255) NOT NULL, `email` varchar(255) NOT NULL, `password` varchar(255) NOT NULL, `designationId` varchar(36) NULL, `categoryId` varchar(36) NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB");
-        await queryRunner.query("CREATE TABLE `category` (`id` varchar(36) NOT NULL, `createdAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP, `updatedAt` timestamp NULL ON UPDATE CURRENT_TIMESTAMP, `job_type` varchar(255) NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB");
+        await queryRunner.query("CREATE TABLE `category` (`id` varchar(36) NOT NULL, `createdAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP, `updatedAt` timestamp NULL ON UPDATE CURRENT_TIMESTAMP, `job_type` enum ('freelancer', 'part-time', 'full-time', 'intern') NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB");
         await queryRunner.query("ALTER TABLE `company` ADD CONSTRAINT `FK_c41a1d36702f2cd0403ce58d33a` FOREIGN KEY (`userId`) REFERENCES `user`(`id`) ON DELETE NO ACTION ON UPDATE NO ACTION");
         await queryRunner.query("ALTER TABLE `department` ADD CONSTRAINT `FK_1c9f0159b4ae69008bd356bb1ce` FOREIGN KEY (`companyId`) REFERENCES `company`(`id`) ON DELETE NO ACTION ON UPDATE NO ACTION");
         await queryRunner.query("ALTER TABLE `designation` ADD CONSTRAINT `FK_db94a67866860fc6d2e4a60388d` FOREIGN KEY (`departmentId`) REFERENCES `department`(`id`) ON DELETE NO ACTION ON UPDATE NO ACTION");
