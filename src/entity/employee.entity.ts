@@ -5,6 +5,7 @@ import Template from './template.entity'
 import { Attendance } from './attendance.entity'
 import { OverTime } from './overtime.entity'
 import { Expense } from './expenses.entity'
+import { PayRoll } from './payroll/payroll.entity'
 
 /**
  * @decorator
@@ -54,6 +55,12 @@ export class Employee extends Template {
 
 	@Column()
 	password: string
+
+	/**
+	 * @default inherits
+	 */
+	@OneToMany((type) => PayRoll, (pr) => pr.employee)
+	payroll: PayRoll
 
 	/**
 	 * @decorator
