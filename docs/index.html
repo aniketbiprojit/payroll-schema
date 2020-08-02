@@ -67,10 +67,98 @@
 				<a href="#typeorm-node" id="typeorm-node" style="color: inherit; text-decoration: none;">
 					<h1>typeorm-node</h1>
 				</a>
-				<a href="#it-begins-here" id="it-begins-here" style="color: inherit; text-decoration: none;">
-					<h3>It begins here</h3>
+				<p>Using MySQL and TypeORM</p>
+				<a href="#run-instructions" id="run-instructions" style="color: inherit; text-decoration: none;">
+					<h2>Run Instructions</h2>
 				</a>
-				<!-- Documenatation testing. -->
+				<a href="#setup-ormconfigjson" id="setup-ormconfigjson" style="color: inherit; text-decoration: none;">
+					<h3>Setup ormconfig.json</h3>
+				</a>
+				<p>Setup the mysql username and password</p>
+				<a href="#node-instructions" id="node-instructions" style="color: inherit; text-decoration: none;">
+					<h3>Node instructions</h3>
+				</a>
+				<p>The first run takes a while as all <strong>migrations</strong> are run.</p>
+				<pre><code class="language-sh">npm i
+npm i -g tsc ts-node tsconfig-paths nodemon
+
+nodemon --<span class="hljs-built_in">exec</span> ts-node ./src/index.ts</code></pre>
+				<a href="#entities" id="entities" style="color: inherit; text-decoration: none;">
+					<h2>Entities</h2>
+				</a>
+				<p>Most entites are stright foward. Here is an explanationn for the ones that are not.</p>
+				<a href="#calendar-attendance-and-overtime" id="calendar-attendance-and-overtime" style="color: inherit; text-decoration: none;">
+					<h3>Calendar, Attendance and OverTime</h3>
+				</a>
+				<ul>
+					<li>CalendarBaseClass<ul>
+							<li>Abstract Class</li>
+							<li>DayOfWeek</li>
+							<li>Month</li>
+							<li>Day</li>
+							<li>Year</li>
+						</ul>
+					</li>
+					<li>Calendar -&gt; Can be replaced or populated with dates<ul>
+							<li>Derived from CalendarBaseClass</li>
+						</ul>
+					</li>
+					<li>Attendance<ul>
+							<li>Single DateId -&gt; which ManyToOne Calendar</li>
+						</ul>
+					</li>
+					<li>Public Holiday<ul>
+							<li>Derived from CalendarBaseClass</li>
+						</ul>
+					</li>
+				</ul>
+				<a href="#payroll" id="payroll" style="color: inherit; text-decoration: none;">
+					<h3>PayRoll</h3>
+				</a>
+				<ul>
+					<li>A Payroll can be assigned to department, designation or employee</li>
+					<li>It implements a PayRollArchitechure.</li>
+					<li>It has Releases which account for monthy or weekly</li>
+					<li>If designation or employee is created, it inherits and if modified a new row will be added to the payroll and inheritance can be disabled.</li>
+				</ul>
+				<a href="#payrollarchitecture" id="payrollarchitecture" style="color: inherit; text-decoration: none;">
+					<h3>PayRollArchitecture</h3>
+				</a>
+				<ul>
+					<li>It implements a circular tree-like structure</li>
+					<li>It mantains an independent order for every PayRoll</li>
+					<li>This order specifies how PayRollComponent(s) are put and how the final pay is calculated.</li>
+					<li>If order is 0<ul>
+							<li>The PayRollComponent is evaluated on base salary.</li>
+							<li>If order of more than one compnent in the architecture is 0, all components are seprately evaluated on the base salary and sum is taken.</li>
+							<li>Example: There is TDS(10 percent deduction) and Good(500 fixed increase) and the base salary is 1000, it will be evaluated as <code>1000-(100)+500</code></li>
+						</ul>
+					</li>
+					<li>If order is n&gt;=1:<ul>
+							<li>The Component is evaluated on result of n-1 during traversal.</li>
+							<li>The there count of n is more than one, all components are parallely evaluated and summed.</li>
+						</ul>
+					</li>
+					<li>When highest order is reached, final salary can be shown.</li>
+				</ul>
+				<a href="#payrollcomponent" id="payrollcomponent" style="color: inherit; text-decoration: none;">
+					<h3>PayRollComponent</h3>
+				</a>
+				<ul>
+					<li>Health: +1 or -1; This gets multipled to the component value.</li>
+					<li>PayType: fixed or percent</li>
+					<li>maxLimit : The limits</li>
+					<li>maxLimit triggers : If limit is exceeded this trigger is called. This is a ManyToMany relation.</li>
+					<li>During traversal of architechture, this trigger is evaluated on parall if not specified.</li>
+				</ul>
+				<a href="#releases" id="releases" style="color: inherit; text-decoration: none;">
+					<h3>Releases</h3>
+				</a>
+				<ul>
+					<li>Can be monthly or weekly</li>
+					<li>Uses Calendar</li>
+					<li>Evaluates OverTime and Expenses : monthly or weekly depending the above value.</li>
+				</ul>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
