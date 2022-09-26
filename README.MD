@@ -71,3 +71,7 @@ Most entites are stright foward. Here is an explanationn for the ones that are n
 - Can be monthly or weekly
 - Uses Calendar
 - Evaluates OverTime and Expenses : monthly or weekly depending the above value.
+
+
+### License
+- Licensed under CC-NC-ND 4.0
